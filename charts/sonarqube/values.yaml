@@ -74,13 +74,13 @@ networkPolicy:
 
 # also install the nginx ingress helm chart
 nginx:
-  enabled: false
+  enabled: true
 
 ingress:
-  enabled: false
+  enabled: true
   # Used to create an Ingress record.
   hosts:
-    - name: sonarqube.your-org.com
+    - name: sonarqube.nucleos.net.pl
       # Different clouds or configurations might need /* as the default path
       path: /
       # For additional control over serviceName and servicePort
@@ -94,7 +94,7 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-body-size: "64m"
 
   # Set the ingressClassName on the ingress record
-  # ingressClassName: nginx
+    ingressClassName: nginx
 
 # Additional labels for Ingress manifest file
   # labels:
